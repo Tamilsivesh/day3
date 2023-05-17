@@ -1,0 +1,31 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    public static int GCD(int a,int b){
+        if(a%b==0){
+            return b;
+        }
+        else{
+            return GCD(b,a%b);
+        }
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	   	Scanner T=new Scanner(System.in);
+	   	int t=T.nextInt();
+	   	while(t-->0){
+		int X=T.nextInt();
+		int Y=T.nextInt();
+		int g=GCD(X,Y);
+		int LCM=(X*Y)/g;
+		System.out.print(g);
+		System.out.print(LCM);
+	   	}
+	}
+}
